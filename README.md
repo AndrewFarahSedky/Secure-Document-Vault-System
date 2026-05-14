@@ -45,6 +45,11 @@ Run schema.sql in pgAdmin
 - Frontend: https://localhost:5173
 - Backend: https://localhost:5000/api/health
 
-## Default Admin
-Email: admin@test.com
-Password: Admin@123
+## Default Admin Setup
+
+After running the project, create an admin user by registering normally,
+then run this SQL query in pgAdmin:
+
+```sql
+UPDATE users SET role = 'admin' WHERE email = 'your_email@example.com';
+```
